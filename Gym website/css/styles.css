@@ -1,0 +1,579 @@
+/*
+Final Project
+Written by: (Olivier Leone 2045231, Michael Sousa 1960056)
+*“We both have equal parts contributed here”
+For “Internet Programming” Section ( Sec No.00001)– Fall 2023
+*/
+/* CSS Reset */
+body,
+header,
+nav,
+main,
+footer,
+h1,
+div,
+img,
+ul,
+figure,
+section,
+article,
+video,
+audio {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background: linear-gradient(to bottom, rgb(12, 12, 12), #282a2b);
+}
+/* styling for the images and videos */
+img,
+video {
+  max-width: 100%;
+  display: block;
+}
+
+/* applies to all elements (*) box sizing property */
+* {
+  box-sizing: border-box;
+}
+
+/* Styling for main section */
+main {
+  background-color: #fff;
+  padding: 2%;
+  font-size: 1.15em;
+  font-family: "Roboto Slab", serif;
+  clear: left;
+}
+
+/* styling for the main h1 */
+main h1 {
+  font-size: 1.8em;
+}
+
+video {
+  margin: 0 auto 4%;
+}
+
+/* padding for article (Nutrition section) */
+article {
+  padding: 2%;
+}
+
+/* Making the article section text centered */
+article h3 {
+  text-align: center;
+  font-size: 1.75em;
+}
+
+/* Making the article images have a auto margin */
+article img {
+  margin: 0 auto;
+}
+
+/* Making the article unordered list have a margin left 10% */
+article ul {
+  margin-left: 10%;
+}
+
+/*article:nth-of-type(2) {
+	background-color: rgba(204, 204, 204, 0.3);
+}
+*/
+
+/* makes it so the clickable part is within the image */
+.frame {
+  position: relative;
+  max-width: 450px;
+  margin: 2% auto;
+  opacity: 0.9;
+}
+
+/* making that when you click example in about us class ur cursor is a pointer indicating the user can click */
+/* also making the text bold */
+.viewex {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+#example {
+  display: none;
+}
+
+/* making so that when you hover over the image in home page theres interactivity */
+.frame:hover {
+  opacity: 1;
+  box-shadow: 8px 8px 10px #000000;
+  transform: translateY(10px);
+}
+
+/* making the margin 2% for the weights, cardio and personal training in our about us section */
+#weights,
+#cardio,
+#training {
+  margin: 0 2%;
+  width: 29%;
+  float: left;
+}
+
+/* making the images have rounded corners */
+.round {
+  border-radius: 8px;
+}
+
+/* making the text  center for the contact page */
+#contact {
+  text-align: center;
+}
+
+/* removing the line in the email link and making the link red */
+#contact .contact-email-link {
+  color: rgb(236, 12, 0);
+  text-decoration: none;
+}
+
+/* making the map location have a black border and a desired ratio */
+.map {
+  border: 2px solid #000000;
+  width: 95%;
+  height: 50%;
+}
+
+/* styling the form in the contact us page */
+#form {
+  margin-top: 2%;
+  background-color: #f2f2f2;
+  padding: 2%;
+}
+
+/* making the form h2 be centered in the middle */
+#form h2 {
+  text-align: center;
+}
+
+/* Styling for form element */
+form {
+  width: 70%;
+  margin: 0 auto;
+  width: auto;
+}
+
+/* styling for the form grid */
+.form-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+}
+
+/* Style rules for form elements */
+/* making the styling so that the form starts a little bit under the grey area */
+fieldset,
+input,
+select,
+textarea {
+  margin-bottom: 2%;
+}
+
+/* styling the form element for legend */
+fieldset legend {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+/* styling the form element for label */
+/* they wont all appear on the same line */
+label {
+  display: block;
+  padding-top: 3%;
+}
+
+/* submit button styling */
+form #submit {
+  margin: 0 auto;
+  border: none;
+  display: block;
+  padding: 2%;
+  background-color: #add8e6;
+  font-size: 1em;
+
+  border-radius: 10px;
+}
+
+/* Style rules for footer */
+footer .copyright {
+  font-size: 0.75em;
+  text-align: center;
+  color: #fff;
+  padding: 2% 4%;
+  float: left;
+  width: 100%;
+}
+
+/* making the footer have color */
+/* and aligning the text to be centered */
+footer p a {
+  color: #ff0101;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* styling for the social media logos so they appear beside each other and not on top */
+.social {
+  float: right;
+
+  padding: 2%;
+}
+
+/* styling the social media logos */
+.social img {
+  display: inline-block;
+  padding: 5%;
+  text-align: right;
+}
+
+/* Style rule for displaying the tablet/desktop class */
+.desktop {
+  display: block; /* Displaying the tablet/desktop class */
+}
+
+/* adding padding to the header */
+header {
+  padding-bottom: 2%;
+  width: 15%;
+  float: left;
+  padding-bottom: 0;
+}
+
+/* styling for the navigation menu */
+nav {
+  padding: 1%;
+  margin-bottom: 1%;
+  float: right;
+  width: 70%;
+  margin: 4em 1em 0 0;
+}
+
+/* styling for the navigation menu */
+nav ul {
+  list-style-type: none;
+  text-align: right;
+}
+
+/* styling for the navigation menu modifying the individual words */
+nav li {
+  font-size: 2em;
+  font-family: "Bebas Neue", sans-serif; /* Update to Bebas Neue */
+  display: inline-block;
+  border-right: 1px solid #fff;
+  border: none;
+}
+
+/* styling for the navigation menu */
+nav li a {
+  padding: 0.1em 0.75em;
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5em 1em;
+}
+
+/* when you hover over the navigation menu  a white background will show */
+/* use of transform is important here */
+nav li a:hover {
+  color: #000;
+  background-color: #fff;
+  transform: scale(1.3);
+}
+
+/* Styling for main content area unordered list*/
+main ul {
+  margin: 0 0 4% 10%;
+}
+
+/* styling for the image grids (About us page and Nutrition */
+.grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+}
+
+/* Style rule for a specific grid item with class .grid-item4 */
+.grid-item4 {
+  /* Setting the grid column for .grid-item4 to span 3 columns */
+  grid-column: 1 / span 3;
+}
+
+/* styling for the about us page */
+
+/* making the common exercise part have a greyish background border */
+#exercises {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  border-left: 1px solid #000;
+  background: linear-gradient(to right, rgb(204, 204, 204) b0b, #fff);
+  background-color: #add8e6;
+  padding: 1% 2%;
+  clear: left;
+}
+
+/* making the definition term have bold text (title before the main part) */
+#exercises dt {
+  font-weight: bold;
+}
+
+/* making the definition description have a certain padding */
+#exercises dd {
+  padding: 0.5% 1% 2% 0;
+}
+
+.exercise-reference {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 0.7em;
+  font-weight: bold;
+  margin-top: 5px;
+  display: inline-block;
+}
+
+/* making the telephone number in the contact us page have a bigger font size */
+.tel-num {
+  font-size: 1.25em;
+}
+
+/* making the map have a desired size */
+.map {
+  width: 600px;
+  height: 450px;
+}
+
+/* Styling for Table */
+/* giving a border to the table */
+table {
+  border: 1px solid #000;
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* making the caption have a bigger font size and making it bold */
+/* text before the table data */
+caption {
+  font-size: 1.5em;
+  font-weight: bold;
+  padding: 1%;
+}
+
+/* styling for the th and td elements of the table to have a border */
+th,
+td {
+  border: 1px solid #000;
+  padding: 2%;
+}
+
+/* styling for the th specifically */
+th {
+  background-color: #000;
+  color: #fff;
+  font-size: 1.15em;
+}
+
+/* Style rule for table rows: apply background color to odd-numbered rows */
+/* makes it have a pattern of white grey white grey */
+tr:nth-child(odd) {
+  background-color: #add8e6;
+}
+
+/* styling for the button on the contact us page */
+.btn {
+  grid-column: 1 / span 3;
+}
+
+/* styling for the BMI section of nutrition page */
+#bmi-section {
+  background-color: #f2f2f2;
+  padding: 2%;
+  margin-top: 20px; 
+  border-radius: 10px;
+}
+
+/* styling for the h3 of the BMI section */
+#bmi-section h3 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* styling for the paragraph part of the BMI calculator */
+#bmi-section p {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* styling for the specific BMI form */
+#bmiForm {
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* styling for the label in the BMI section */
+#bmiForm label {
+  display: block;
+  margin-top: 10px;
+}
+
+/* styling for the select and user input  in the BMI section */
+#bmiForm select,
+#bmiForm input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* styling for BMI button */
+#bmiForm button {
+  background-color: #add8e6;
+  color: #000;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* styling for the final result in the BMI section */
+#result {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* styling for the waist to hip ratio calculator */
+#waistHipSection {
+  background-color: #f2f2f2;
+  padding: 2%;
+  margin-top: 20px;
+  margin-left: px; 
+  border-radius: 10px;
+}
+
+/* styling for the waist to hip ratio h3 */
+#waistHipSection h3 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* styling for the waist to hip ratio form */
+#waistHipForm {
+  width: 70%;
+  margin: 0 auto;
+}
+
+/* styling for the waist to hip ration fieldset */
+#waistHipForm fieldset {
+  margin-bottom: 2%;
+}
+
+/* styling for the waist to hip ration legend section(text on the border)*/
+#waistHipForm legend {
+  font-weight: bold;
+  font-size: 1.25em;
+}
+
+/* styling for the waist to hip ratio label */
+#waistHipForm label {
+  display: block;
+  margin-top: 10px;
+}
+
+/* styling for the waist to hip ratio User input*/
+#waistHipForm input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* styling for the waist to ratio Button */
+#waistHipForm button {
+  background-color: #add8e6;
+  color: #000;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/*styling for the waist to hip final result */
+#waistHipResult {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* Style for Heart Rate Calculator Section */
+#heartRateSection {
+  background-color: #f2f2f2;
+  padding: 2%;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+/* styling for Heart Rate h3 section */
+#heartRateSection h3 {
+  text-align: center;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+/* styling for the Heart Rate form */
+#heartRateForm {
+  width: 70%;
+  margin: 0 auto;
+}
+
+/*Styling for the Heart Rate Label Part of the section */
+#heartRateForm label {
+  display: block;
+  margin-top: 10px;
+}
+
+/* Styling for the Heart Rate user input */
+#heartRateForm input {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+/* Styling for the Heart Rate Button */
+#heartRateForm button {
+  background-color: #add8e6;
+  color: #000;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+
+/* styling for the final result of the Heart Rate calculator */
+#heartRateResult {
+  text-align: center;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+/* styling for the result value */
+#resultValue {
+  color: #ff0000; 
+}
+

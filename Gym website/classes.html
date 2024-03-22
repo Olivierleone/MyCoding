@@ -1,0 +1,169 @@
+<!---------------------------------------------------------
+Final Project
+Written by: (Olivier Leone 2045231, Michael Sousa 1960056)
+*“Olivier worked on the structure of the page and michael 
+helped the table shown on the page, he also helped with the
+prototype of how the music player will work”
+For “Internet Programming” Section ( Sec No.00001)– Fall 2023
+----------------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- title of the tab-->
+    <title>Fitness Schedule | FitZone</title>
+    <meta charset="utf-8" />
+
+    <!-- Making it accessible on mobile and desktop -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- linking the stylesheet-->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- font for the navigation menu (custom google api font - make sure to specify the font name)-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon-->
+    <link rel="icon" href="Images/smiley.jpg" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="container">
+      <!-- Use the header area for the website name or logo -->
+      <header id="ffc-logo">
+        <a href="index.html"
+          ><img src="images/fitzone-logo.png" alt="Fitzone logo"
+        /></a>
+      </header>
+
+      <!-- Nav menu (top left)-->
+      <nav class="desktop">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="nutrition.html">Nutrition</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Classes Hero Image -->
+      <div id="hero" class="desktop">
+        <img src="images/secondary banner.jpg" alt="fitness" />
+      </div>
+
+      <!-- table to list the different schedules for the training sessions -->
+      <main>
+        <div class="desktop">
+          <table>
+            <!-- main headings -->
+            <caption>
+              Group Fitness Class Schedule:
+            </caption>
+
+            <tr>
+              <!-- Row 1 -->
+              <th>Class</th>
+              <th>Days</th>
+              <th>Times</th>
+              <th>Instructor</th>
+              <th>Room</th>
+            </tr>
+            <tr>
+              <!-- Row 2 -->
+              <td>Strength Training</td>
+              <td>Mon, Wed, Fri</td>
+              <td>7:30am, 6:00pm</td>
+              <td>Nolan Everhart</td>
+              <td>C</td>
+            </tr>
+            <tr>
+              <!-- Row 3 -->
+              <td>Pilates</td>
+              <td>Tue, Thu</td>
+              <td>5:30am, 5:30pm</td>
+              <td>Maya Rainwater</td>
+              <td>D</td>
+            </tr>
+            <tr>
+              <!-- Row 4 -->
+              <td>Spinning</td>
+              <td>Tue, Thu</td>
+              <td>6:30am, 6:30pm</td>
+              <td>Dominic Falcone</td>
+              <td>A</td>
+            </tr>
+            <tr>
+              <!-- Row 5 -->
+              <td>Kickboxing</td>
+              <td>Mon, Wed, Fri</td>
+              <td>8:30am, 7:45pm</td>
+              <td>Isabella Nightshade</td>
+              <td>A</td>
+            </tr>
+            <tr>
+              <!-- Row 6 -->
+              <td>Mindful Meditation</td>
+              <td>Tue, Thu</td>
+              <td>7:30am, 7:30pm</td>
+              <td>Jasper Wilder</td>
+              <td>D</td>
+            </tr>
+            <tr>
+              <!-- Row 7 -->
+              <td>Zumba</td>
+              <td>Mon, Wed, Fri</td>
+              <td>9:30am, 8:00pm</td>
+              <td>Zoey Bluebell</td>
+              <td>C</td>
+            </tr>
+
+            <!-- End of the table -->
+          </table>
+        </div>
+
+        <!-- sample of the music being played in the sessions Use either mp3 or wav ( wav better quality)-->
+        <!-- make custom music TODO-->
+        <!-- put in the middle TODO-->
+        <!-- **FIXING THE INPUT ** TODO-->
+        <!--
+        <div id="music-sample">
+          <h3>Sample of the music being played while in class</h3>
+
+          <!-- use audio control for volume up down etc-->
+          <!-- 
+          <audio controls>
+            <source src="media/sample_audio.wav" type="audio/wav" />
+            <p>Your browser does not support the audio element.</p>
+          </audio>
+        
+        </div>
+        -->
+      </main>
+
+      <!-- Use the footer area to add webpage footer content -->
+      <footer>
+        <div class="copyright">
+          <p>&copy; Copyright 2023. All Rights Reserved.</p>
+          <p><a href="mailto:fitzone@gmail.com">fitzone@gmail.com</a></p>
+        </div>
+
+        <!--
+        <div class="social">
+          <a href="https://www.facebook.com/" target="_blank"
+            ><img src="images/facebook-logo.png" alt="Facebook logo"
+          /></a>
+          <a href="https://twitter.com/home" target="_blank"
+            ><img src="images/x-logo.png" alt="X logo"
+          /></a>
+        -->
+        </div>
+      </footer>
+    </div>
+
+    <!-- script linking (in a folder)-->
+    <script src="scripts/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,203 @@
+<!---------------------------------------------------------
+Final Project
+Written by: (Olivier Leone 2045231, Michael Sousa 1960056)
+*“Olivier worked on the structure of the page  and fetching the api
+and michael helped with the ideas of what exercises 
+and what they should include”
+For “Internet Programming” Section ( Sec No.00001)– Fall 2023
+----------------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Fitness Equipment - Personal Training | FitZone</title>
+    <meta charset="utf-8" />
+
+    <!-- making the site compatible with mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- linking the style sheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- font for the navigation menu (custom google api font - make sure to specify the font name)-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon-->
+    <link rel="icon" href="Images/smiley.jpg" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="container">
+      <!-- Logo goes on header area -->
+      <header id="ffc-logo">
+        <a href="index.html"
+          ><img src="images/fitzone-logo.png" alt="Fitzone logo"
+        /></a>
+      </header>
+
+      <!-- Nav Menu-->
+      <nav class="desktop">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="nutrition.html">Nutrition</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Banner Image -->
+      <div id="hero" class="desktop">
+        <img src="images/Third banner.jpg" alt="guy squatting with weights" />
+      </div>
+
+      <!-- main section-->
+      <main>
+        <!-- three columns one for weight , cardio and personal training-->
+        <section id="weights">
+          <h1>Weights</h1>
+          <!-- making the image have rounded corners-->
+          <img
+            src="images/girl with weights.jpg"
+            alt="girl with weight on shoulder"
+            class="round"
+          />
+          <p>
+            Explore our facility's weight training area, featuring a variety of
+            weight options. Enhance your strength and build lean muscle through
+            targeted weight training, while also focusing on improving your core
+            stability.
+          </p>
+          <ul class="desktop">
+            <li>Resistance Bands</li>
+            <li>Medicine Balls</li>
+            <li>Dumbbells</li>
+          </ul>
+        </section>
+
+        <section id="cardio">
+          <h1>Cardio</h1>
+          <img src="images/machines.jpg" alt="Cardio" class="round" />
+          <p>
+            Achieve fat loss with cardio workouts. Experts suggest engaging in
+            150 minutes of cardio each week. Explore our diverse equipment
+            options to customize your workout.
+          </p>
+          <ul class="desktop">
+            <li>Stair Climbers</li>
+            <li>Rowing Machines</li>
+            <li>Spin Bikes</li>
+          </ul>
+        </section>
+
+        <section id="training">
+          <h1>Personal Training</h1>
+          <img
+            src="images/Personal Trainer 2.jpg"
+            alt="personal trainer sitting down"
+            class="round"
+          />
+          <p>
+            Collaborate with our certified personal trainers to reach your
+            fitness goals and monitor your progress. Experience the numerous
+            benefits of personal training.
+          </p>
+          <ul class="desktop">
+            <li>Commitment Tracking</li>
+            <li>Tailored Fitness Plans</li>
+            <li>Ongoing Encouragement and Inspiration</li>
+          </ul>
+        </section>
+
+        <!-- example clickable text that will show the Exercise once clicked the script to run the video will display it under the text.-->
+        <!-- uses onclick-->
+        <section id="exercises" class="desktop">
+          <h1>Common Exercises</h1>
+          <p>
+            The following exercises are encouraged for our clients as part of
+            their daily fitness regimen.
+          </p>
+          <dl>
+            <dt>Burpee</dt>
+            <dd>
+              Engage in the dynamic full-body exercise of burpees to boost
+              strength and endurance. Start from a standing position, transition
+              into a squat, extend your hands forward, kick your feet back and
+              forward rapidly, and conclude with a powerful jump from a squatted
+              stance.
+              <span class="viewex" onclick="burpees()"> View Example.</span>
+              <br />
+              <a
+                class="exercise-reference"
+                href="https://www.youtube.com/watch?v=auBLPXO8Fww"
+                target="Burpees example"
+                >Reference</a
+              >
+            </dd>
+
+            <dt>Push-Ups</dt>
+            <dd>
+              Assume plank position, hands shoulder-width apart. Lower body
+              until chest nears the ground, then push back up, keeping a
+              straight line from head to heels.
+              <span class="viewex" onclick="push()"> View Example.</span> <br />
+              <a
+                class="exercise-reference"
+                href="https://www.youtube.com/watch?v=0pkjOk0EiAk"
+                target="Push-Ups example"
+                >Reference</a
+              >
+            </dd>
+
+            <dt>Pull-Up</dt>
+            <dd>
+              Hang from a bar with palms facing away. Pull body upward until
+              chin is above the bar, then lower down. Repeat for desired reps,
+              maintaining controlled movement.
+              <span class="viewex" onclick="pull()"> View Example.</span> <br />
+              <a
+                class="exercise-reference"
+                href="https://www.youtube.com/watch?v=HRV5YKKaeVw"
+                target="Pull-Ups example"
+                >Reference</a
+              >
+            </dd>
+          </dl>
+
+          <!-- making the video actually run and also putting error handling just in case-->
+          <video controls id="example">
+            <source id="vid-src" src="vid" type="video/mp4" />
+            <track id="despsrc" />
+            <p>Your browser does not support the video element.</p>
+          </video>
+        </section>
+      </main>
+
+      <!-- Use the footer area to add webpage footer content -->
+      <footer>
+        <div class="copyright">
+          <p>&copy; Copyright 2023. All Rights Reserved.</p>
+          <p><a href="mailto:fitzone@gmail.com">fitzone@gmail.com</a></p>
+        </div>
+
+        <!--
+        <div class="social">
+          <a href="https://www.facebook.com/fwdfitclub" target="_blank"
+            ><img
+              src="images/facebook-logo.png"
+              alt="black and white Facebook logo"
+          /></a>
+          <a href="https://twitter.com/fwdfitclub" target="_blank"
+            ><img src="images/x-logo.png" alt="black and white Twitter logo"
+          /></a>
+        
+        </div>
+      --></footer>
+    </div>
+
+    <!-- script linking (in a folder)-->
+    <script src="scripts/script.js"></script>
+  </body>
+</html>

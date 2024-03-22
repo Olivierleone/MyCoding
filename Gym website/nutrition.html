@@ -1,0 +1,281 @@
+<!---------------------------------------------------------
+Final Project
+Written by: (Olivier Leone 2045231, Michael Sousa 1960056)
+*“Olivier worked on the structure of the page and made the
+the three food columns and michael helped with the custom
+nutrition aspects of the page”
+For “Internet Programming” Section ( Sec No.00001)– Fall 2023
+----------------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- title of the site tab-->
+    <title>Nutrition Guidance | FitZone</title>
+    <meta charset="utf-8" />
+
+    <!-- making the site compatible with mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- linking the style sheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- font for the navigation menu (custom google api font - make sure to specify the font name)-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon-->
+    <link rel="icon" href="Images/smiley.jpg" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="container">
+      <!-- Use the header area for the website name or logo -->
+      <header id="ffc-logo">
+        <a href="index.html"
+          ><img src="images/fitzone-logo.png" alt="Fitzone logo"
+        /></a>
+      </header>
+
+      <!--Nav menu -->
+      <nav class="desktop">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="nutrition.html">Nutrition</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Nutrition Banner -->
+      <div id="hero">
+        <img
+          src="images/food chain banner.jpg"
+          alt="food aligned in banner form"
+        />
+      </div>
+
+      <!-- Making the three columns again-->
+      <main class="grid">
+        <article>
+          <h3>Thoughtful Nourishment</h3>
+          <img src="images/berries.jpg" alt="Berries" class="round" />
+          <p>
+            Embracing good nutrition is a lifestyle, not a diet. It involves
+            adopting a fresh perspective on food. Consider your body as a
+            vehicle that relies on food for fuel, and make sure to fill your
+            tank with the right type of fuel.
+          </p>
+          <p>
+            View your nutrition plan not as a diet but as a lifestyle change.
+            Lasting results come from making permanent changes. Success lies in
+            maintaining a daily focus on your goal.
+          </p>
+          <p>
+            Manage your meal portions and monitor calorie intake. Numerous free
+            mobile apps can assist in tracking both your activity level and
+            calories.
+          </p>
+          <p>
+            Manage impulsive urges to purchase junk food; instead, consider
+            allowing yourself one 'cheat' meal per week.
+          </p>
+        </article>
+
+        <article>
+          <h3>Choosing Your Food</h3>
+          <img
+            src="images/food in a pot.jpg"
+            alt="diverse food in a skillet"
+            class="round"
+          />
+          <p>Guidelines to Follow:</p>
+          <ul>
+            <li>Protein, such as eggs, chicken, and lean red meat</li>
+            <li>Vegetables, but avoid corn and peas</li>
+            <li>Fruit</li>
+            <li>Fat, such as olive oil, nuts, and seeds</li>
+          </ul>
+          <p>
+            Reduce intake of bread, pasta, white potatoes, and processed foods
+            due to their high carbohydrate content.
+          </p>
+          <p>
+            When grocery shopping, focus on the outer aisles, opt for organic
+            when available, and ensure your cart includes fresh vegetables,
+            almond flour, and flaxseed.
+          </p>
+          <p>Explore our Meal of the Week for fresh meal ideas.</p>
+        </article>
+
+        <article>
+          <h3>Featured Weekly Meal</h3>
+          <img
+            src="images/Chicken recipe.jpg"
+            alt="Grilled Lemon Herb Chicken"
+            class="round"
+          />
+          <h4>Grilled Lemon Herb Chicken</h4>
+          <h4>Ingredients:</h4>
+          <ul>
+            <li>4 boneless, skinless chicken breasts (organic preferred)</li>
+            <li>2 tablespoons olive oil</li>
+            <li>Juice of 1 lemon</li>
+            <li>1 teaspoon dried oregano</li>
+            <li>1 teaspoon dried thyme</li>
+            <li>Salt and pepper to taste</li>
+            <li>Fresh parsley for garnish (optional)</li>
+          </ul>
+          <h4>Instructions:</h4>
+          <p>
+            Combine olive oil, lemon juice, minced garlic, oregano, thyme, salt,
+            and pepper in a plastic bag. Marinate chicken for at least 30
+            minutes. Preheat grill to medium-high heat. Grill chicken for 6-8
+            minutes per side or until the internal temperature reaches 165°F.
+            Let the chicken rest for a few minutes. Optionally garnish with
+            fresh parsley
+          </p>
+        </article>
+
+        <!-- BMI Calculator Section-->
+        <section id="bmi-section">
+          <h3>Calculate Your BMI</h3>
+          <p>
+            Body Mass Index (BMI) is a measure of body fat based on your weight
+            and height. It is a useful indicator of whether you are underweight,
+            normal weight, overweight, or obese. Enter your information below to
+            calculate your BMI:
+          </p>
+          <form id="bmiForm">
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required />
+
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="Other/Prefer not to say">
+                Other/Prefer not to say
+              </option>
+            </select>
+
+            <label for="weight">Weight (lb):</label>
+            <input type="number" id="weight" name="weight" required />
+
+            <label for="feet">Feet:</label>
+            <input type="number" id="feet" name="feet" required />
+
+            <label for="inches">Inches:</label>
+            <input type="number" id="inches" name="inches" required />
+
+            <label for="activity">Activity Level:</label>
+            <select id="activity" name="activity" required>
+              <option value="sedentary">Sedentary</option>
+              <option value="moderate">Moderate</option>
+              <option value="active">Active</option>
+            </select>
+
+            <label for="goal">Fitness Goal:</label>
+            <select id="goal" name="goal" required>
+              <option value="lose">Lose Weight</option>
+              <option value="maintain">Maintain Weight</option>
+              <option value="gain">Gain Weight</option>
+            </select>
+
+            <!-- uses method calculateBMI to get the result-->
+            <button type="button" onclick="calculateBMI()">
+              Calculate BMI
+            </button>
+
+            <p id="result">Your BMI will appear here.</p>
+          </form>
+        </section>
+
+
+        <!-- Waist to Hip calculator Section-->
+        <section id="waistHipSection" class="form-section">
+          <h3>Waist-to-Hip Ratio Calculator</h3>
+          <p>
+            The Waist-to-Hip Ratio (WHR) is a significant health indicator that assesses
+            the distribution of body fat. This ratio is calculated by dividing the
+            circumference of your waist by the circumference of your hips. A lower WHR is
+            generally associated with a lower risk of developing cardiovascular diseases.
+            Use our Waist-to-Hip Ratio Calculator to determine your WHR and gain insights
+            into your body fat distribution.
+          </p>
+          <form id="waistHipForm" class="form-grid">
+            <!-- Waist Circumference -->
+            <fieldset>
+              <legend>Waist</legend>
+              <label for="waist">Waist (in inches):</label>
+              <input type="number" id="waist" name="waist" required />
+            </fieldset>
+
+            <!-- Hip Circumference -->
+            <fieldset>
+              <legend>Hip</legend>
+              <label for="hip">Hip (in inches):</label>
+              <input type="number" id="hip" name="hip" required />
+            </fieldset>
+
+            <!-- Submit Button -->
+            <fieldset class="btn">
+
+              <!-- Uses the calculateWaistHipRatio method to get result-->
+              <button type="button" onclick="calculateWaistHipRatio()">
+                Calculate Ratio
+              </button>
+            </fieldset>
+          </form>
+        </section>
+
+        <!-- Calculate heart rate section-->
+       <section id="heartRateSection" class="form-section">
+          <h3>Heart Rate Calculator</h3>
+          <p>
+            Your heart rate is a crucial metric that reflects your cardiovascular fitness.
+            The Heart Rate Calculator estimates your maximum heart rate based on your age.
+            This information is valuable for optimizing your workouts and ensuring you
+            exercise within safe and effective heart rate zones. Whether you're aiming to
+            improve endurance or burn calories, understanding your heart rate can guide
+            you in achieving your fitness goals.
+          </p>
+          <form id="heartRateForm">
+            <label for="heartRateAge">Age:</label>
+            <input type="number" id="heartRateAge" name="heartRateAge" required />
+
+            <!-- getting the result from calculateHeartRate method-->
+            <button type="button" onclick="calculateHeartRate()">
+              Calculate Heart Rate
+            </button>
+
+            <p id="heartRateResult">
+              Your estimated maximum heart rate:
+              <span id="resultValue"></span> bpm
+            </p>
+          </form>
+        </section>
+      </main>
+
+      <!-- Use the footer area to add webpage footer content -->
+      <footer>
+        <div class="copyright">
+          <p>&copy; Copyright 2023. All Rights Reserved.</p>
+          <p><a href="mailto:fitzone@gmail.com">fitzone@gmail.com</a></p>
+        </div>
+
+        <!-- 
+			<div class="social">
+				<a href="https://www.facebook.com/" target="_blank"><img src="images/facebook-logo.png" alt="Facebook logo"></a>
+				<a href="https://twitter.com/home" target="_blank"><img src="images/x-logo.png" alt="X logo"></a>
+			</div>
+		-->
+      </footer>
+    </div>
+
+    <!-- script linking (in a folder)-->
+    <script src="scripts/script.js"></script>
+  </body>
+</html>

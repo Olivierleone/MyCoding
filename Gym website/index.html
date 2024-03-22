@@ -1,0 +1,125 @@
+<!---------------------------------------------------------
+Final Project
+Written by: (Olivier Leone 2045231, Michael Sousa 1960056)
+*“Olivier worked on the structure of the page and made the
+images have hover over effect and michael helped with the 
+navigation part of the page”
+For “Internet Programming” Section ( Sec No.00001)– Fall 2023
+----------------------------------------------------------->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- title of the site tab-->
+    <title>Complete Fitness | FitZone</title>
+    <meta charset="utf-8" />
+
+    <!-- making the site compatible with mobile devices-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- linking the style sheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <!-- font for the navigation menu (custom google api font - make sure to specify the font name)-->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicon-->
+    <link rel="icon" href="Images/smiley.jpg" type="image/x-icon" />
+  </head>
+  <body>
+    <div id="container">
+      <!-- Use the header area for the website name or logo -->
+      <header id="ffc-logo">
+        <a href="index.html"
+          ><img src="images/fitzone-logo.png" alt="Fitzone logo"
+        /></a>
+      </header>
+
+      <!--  Nav Menu -->
+      <nav class="tablet-desktop">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="nutrition.html">Nutrition</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+
+      <!-- Banner Image -->
+      <div id="hero" class="desktop">
+        <img src="images/main banner.jpg" alt="guy squatting with weights" />
+      </div>
+
+      <main>
+        <div class="desktop">
+          <p>
+            Welcome to FitZone! Our mission is to assist clients in achieving
+            their fitness and nutrition goals.
+          </p>
+
+          <p>
+            If you've faced challenges in achieving a healthy lifestyle and are
+            seeking motivation and resources for a positive change, reach out to
+            us today. Our facility offers state-of-the-art equipment, convenient
+            group training classes, and valuable nutrition tips to support your
+            well-being.
+          </p>
+
+          <p>
+            Experience the benefits of our equipment and facility with a FREE
+            one-week membership. This trial grants you full access to our
+            equipment, training classes, and nutrition planning.
+          </p>
+        </div>
+
+        <!-- Making the three columns (making the images clickable to go to different pages)-->
+        <!-- also making the images darker when you hover over them to demonstrate that its clickable-->
+        <div class="grid">
+          <figure class="frame">
+            <a href="classes.html"
+              ><img src="images/group.jpg" alt="People training together"
+            /></a>
+          </figure>
+
+          <figure class="frame">
+            <a href="nutrition.html"
+              ><img src="images/food basket.jpg" alt="basket of food"
+            /></a>
+          </figure>
+
+          <figure class="frame">
+            <a href="contact.html"
+              ><img
+                src="images/personal trainer.jpg"
+                alt="personal trainer using a machine"
+            /></a>
+          </figure>
+        </div>
+      </main>
+
+      <!-- Use the footer area to add webpage footer content -->
+      <footer>
+        <div class="copyright">
+          <p>&copy; Copyright 2023. All Rights Reserved.</p>
+          <p><a href="mailto:fitzone@gmail.com">fitzone@gmail.com</a></p>
+        </div>
+
+        <!--
+
+			
+			<div class="social">
+				<a href="https://www.facebook.com/" target="_blank"><img src="images/facebook-logo.png" alt="Facebook logo"></a>
+				<a href="https://twitter.com/home" target="_blank"><img src="images/x-logo.png" alt="X logo"></a>
+			</div>
+			-->
+      </footer>
+    </div>
+
+    <!-- script linking (in a folder)-->
+    <script src="scripts/script.js"></script>
+  </body>
+</html>

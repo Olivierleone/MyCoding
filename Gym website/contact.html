@@ -1,0 +1,144 @@
+<!---------------------------------------------------------
+Final Project
+Written by: (Olivier Leone 2045231, Michael Sousa 1960056)
+*“Olivier worked on the structure of the page and got the
+map to work and michael helped with the form part of the page”
+For “Internet Programming” Section ( Sec No.00001)– Fall 2023
+----------------------------------------------------------->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- title of the site tab-->
+	<title>Contact Us | FitZone</title>
+	<meta charset="utf-8">
+
+	
+	<!-- making the site compatible with mobile devices-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- linking the style sheet -->
+	<link rel="stylesheet" href="css/styles.css">
+
+	<!-- font for the navigation menu (custom google api font - make sure to specify the font name)-->
+	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+
+	<!-- Favicon-->
+	<link rel="icon" href="Images/smiley.jpg" type="image/x-icon">
+</head>
+<body>
+
+	<div id="container">
+
+		<!-- Use the header area for the website name or logo -->
+		<header id="ffc-logo">
+			<a href="index.html"><img src="images/fitzone-logo.png" alt="FitZone logo"></a>
+		</header>
+
+		<!-- Nav Menu-->
+		<nav class="desktop">
+			<ul>
+				<li><a href="index.html">Home</a></li> 
+				<li><a href="about.html">About Us</a></li> 
+				<li><a href="classes.html">Classes</a></li> 
+				<li><a href="nutrition.html">Nutrition</a></li> 
+				<li><a href="contact.html">Contact Us</a></li>
+			</ul>
+		</nav>
+		
+		<!-- Use the main area to add the main content of the webpage -->
+		<main>
+		
+		<div id="contact">
+		
+			<h2>ARE YOU READY? REACH out to us today.</h2>
+			
+			<h4 class="desktop tel-num">(450) 555-9608</h4>
+			<h4>Email us: <a href="mailto:fitzone@gmail.com" class="contact-email-link">fitzone@gmail.com</a></h4>
+			<h4>Visit us at: 4545 Pierre-de Coubertin Avenue, Montreal, QC H1V 3N7, Canada</h4>
+			
+			<!-- find the Latitude and Longitude of where you want to go-->
+			<!-- src specifies the url-->
+			<!-- Use iframe to embed the map with precise location-->
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2795.040707507733!2d-73.55370838424612!3d45.55974447910019!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xf18dabfdce843b40!2sOlympic%20Stadium!5e0!3m2!1sen!2sus!4v1634227621159!5m2!1sen!2sus" width="600" height="450" allowfullscreen="" class="map"></iframe>
+
+		</div>
+		
+		<div id="form">
+		
+			<h2>Please complete the form below.</h2>
+		
+			<!-- making a form for the user to enter their contact information-->
+		<form class="form-grid"> <!-- Start Form -->
+		
+			<fieldset>
+				<legend>Customer Information</legend>
+				<label for="fName">First Name:</label>
+				<input type="text" name="fName" id="fName" required>
+				
+				<label for="fName">Last Name:</label>
+				<input type="text" name="fName" id="lName" required>
+				
+				<label for="email">Email:</label>
+				<input type="email" name="email" id="email" required>
+				
+				<label for="phone">Phone:</label>
+				<input type="tel" id="phone" name="phone" required>
+			</fieldset>
+			
+
+			<fieldset>
+				<legend>Referral Source</legend>
+				<label for="reference">How Did You Discover Us?</label>
+				<select name="reference" id="reference">
+					<option value="ad">Advertisement</option>
+					<option value="friend">Friend</option>
+					<option value="google">Google</option>
+					<option value="social">Social Media</option>
+					<option value="other">Other</option>
+				</select>
+				
+				<label for="questions">Questions?</label>
+				<textarea id="questions" name="questions" rows="11" cols="45"></textarea>
+				
+				
+			</fieldset>
+			
+			<input type="submit" id="submit" value="Submit" class="btn">
+
+		</form>
+			
+		<button onclick="loadTermsAndService()">Terms and Conditions</button>
+
+			<!-- Add this div to display the content -->
+			<div id="termsContent"></div>
+
+		</main>
+		
+		<!-- Use the footer area to add webpage footer content -->
+		<footer>
+		
+			<div class="copyright">
+				<p>&copy; Copyright 2023. All Rights Reserved.</p>
+				<p><a href="mailto:fitzone@gmail.com">fitzone@gmail.com</a></p>
+			</div>
+			
+		
+			<!--getting the images icon for the social media and making them clickable -->
+			<!-- 
+			<div class="social">
+				<a href="https://www.facebook.com/" target="_blank"><img src="images/facebook-logo.png" alt="Facebook logo"></a>
+				<a href="https://twitter.com/home" target="_blank"><img src="images/x-logo.png" alt="X logo"></a>
+			</div>
+		-->
+
+
+		</footer>
+	
+	</div>
+	
+	<!-- script linking (in a folder)-->
+	<script src="scripts/script.js"></script>
+	
+</body>
+</html>
